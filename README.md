@@ -6,23 +6,24 @@ In this analysis, we will be looking at employee data for Pewlett Hackard to det
 
 ## Resources
 
-- Data: Data/departments.csv
-		Data/dept_emp.csv
-		Data/dept_manager.csv
-		Data/employees.csv
-		Data/salaries.csv
-		Data/titles.csv
+- Data:\
+	Data/departments.csv\
+	Data/dept_emp.csv\
+	Data/dept_manager.csv\
+	Data/employees.csv\
+	Data/salaries.csv\
+	Data/titles.csv
 
 - Software: pgAdmin 4 v5.2, postgreSQL
 
 ## Results
 
 ### Retirement titles
-![Retirement Titles](resources/retirement_titles.png)\
+<img src= "resources/retirement_titles.png" width="850"/>\
 A number of employees have had multiple positions within the company. Without filtering duplicates employee numbers, there are 133776 positions which are occupied by employees due to retire. The employees were born from Jan 01, 1952 to Dec 31, 1955.
 
 ### Unique Title
-![Unique Titles](resources/unique_titles.png)\
+<img src= "resources/unique_titles.png" width="600"/>\
 Filtering out duplicate employee numbers, the actual number of retiring employees by title is 90398. These are employees that were born from Jan 01, 1952 to Dec 31, 1955 with unique titles. This table also includes employees whom may have already left the company.
 
 ### Retiring titles
@@ -30,7 +31,7 @@ Filtering out duplicate employee numbers, the actual number of retiring employee
 This table shows the number of retiring employees from each position. Note that there is a large number of senior positions who will be retiring in the near future.
 
 ### Mentorship Eligibility
-![Mentorship Eligibility](resources/mentorship_elibility.png)\
+![Mentorship Eligibility](resources/mentorship_eligibility.png)\
 Currently in Pewlett Hackard, there are 1549 employees, who are eligible to participate in a mentorship program. These are current employees who are retirement-ready born in the year of 1965.
 
 ## Summary
@@ -80,8 +81,8 @@ GROUP BY d.dept_name
 ORDER BY employee_count DESC
 ```
 
-The output is as such:
-![Senior Retirement by Department](resources/dept_senior_retiring.png) 
+The output is as such:\
+![Senior Retirement by Department](resources/dept_senior_retiring.png)
 
 Note that the Development and Production departments will be hit the hardest, and so Pewlett Hackard should focus on recruitment for those two departments.
 
