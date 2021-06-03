@@ -28,17 +28,15 @@ INTO unique_titles
 FROM retirement_titles
 ORDER BY emp_no ASC, to_date DESC;
 
--- A query is written and executed to create a Retiring Titles 
--- table that contains the number of titles filled by employees 
--- who are retiring.
--- Use Dictinct with Orderby to remove duplicate rows
-SELECT DISTINCT ON (emp_no) emp_no,
-	first_name,
-	last_name,
+-- A query is written and executed to create a 
+-- Retiring Titles table that contains the number of titles 
+-- filled by employees who are retiring
+SELECT COUNT(emp_no), 
 	title
-INTO unique_titles
-FROM retirement_titles
-ORDER BY emp_no ASC, to_date DESC;
+INTO retiring_titles
+FROM unique_titles
+GROUP BY title
+ORDER BY count DESC;
 
 -- DELIVERABLE 2
 
